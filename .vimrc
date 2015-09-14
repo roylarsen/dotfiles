@@ -33,3 +33,6 @@ set showmatch
 set ruler
 "Line numbers
 set number
+
+"Highlight matching chars
+set showmatch
