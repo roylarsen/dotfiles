@@ -36,3 +36,6 @@ set number
 
 "Highlight matching chars
 set showmatch
+
+"Fuckin' Pathogen
+execute pathogen#infect()
