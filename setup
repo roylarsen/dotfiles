@@ -48,5 +48,5 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 # Get freenode password from arg
 
 if [[ -n "$1" ]] ; then
-  sed 's/[A-Za-z0-9]*FREENODEPASSWORD[A-Za-z0-9]*/'$1'/'
+  sed -i -e 's/[A-Za-z0-9]*FREENODEPASSWORD[A-Za-z0-9]*/'$1'/' ~/.irssi/config
 fi

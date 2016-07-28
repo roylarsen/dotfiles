@@ -69,7 +69,7 @@ chatnets = {
     max_whois = "1";
     sasl_mechanism = "PLAIN";
     sasl_username = "nonades";
-    sasl_password = "PASSWORD SET";
+    sasl_password = "FREENODEPASSWORD";
   };
   GameSurge = {
     type = "IRC";
