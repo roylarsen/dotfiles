@@ -7,7 +7,6 @@
 #
 #####################
 
-
 # First things first, we need to do some cleanup
 
 if [[ -f ~/.bashrc ]] ; then
@@ -32,6 +31,9 @@ else
   mkdir -p ~/.vim/bundle ~/.vim/autoload
 fi
 
+if [[ -d ~/.irssi ]]; then
+
+
 # install VIM Pathogen
 
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -42,3 +44,9 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.bashrc ~/.bash_profile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+
+# Get freenode password from arg
+
+if [[ -n "$1" ]] ; then
+  sed 's/[A-Za-z0-9]*FREENODEPASSWORD[A-Za-z0-9]*/'$1'/'
+fi
