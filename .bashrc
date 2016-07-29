@@ -6,7 +6,7 @@
 
 
 # Prompt, currently: [ user - cwd ]
-PS1="[ \[\e[32;1m\]\u \e[m- \[\033[0;34m\]\W \e[m] "
+PS1="( \[\e[32;1m\]\h\e[m ) \n[ \[\e[32;1m\]\u \e[m- \[\033[0;34m\]\W \e[m] "
 
 # How I'm currently breaking my $PATH
 export PATH="/users/larsenr/bin:$PATH"
