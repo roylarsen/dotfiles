@@ -31,8 +31,12 @@ else
   mkdir -p ~/.vim/bundle ~/.vim/autoload
 fi
 
-if [[ -d ~/.irssi ]]; then
-
+if [[ -f ~/.irssi/config ]]; then
+  rm ~/.irssi/config
+else
+  mkdir ~/.irssi
+fi
+  
 
 # install VIM Pathogen
 
@@ -44,6 +48,7 @@ ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.bashrc ~/.bash_profile
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.irssi/config ~/.irssi/config
 
 # Get freenode password from arg
 
