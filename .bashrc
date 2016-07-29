@@ -20,6 +20,7 @@ fi
 
 alias ls='ls -alF'
 alias duh='du -h'
+alias gi="git init"
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
