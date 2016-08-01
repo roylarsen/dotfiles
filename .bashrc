@@ -5,8 +5,14 @@
 ######################
 
 
+# Deconstructed parts of my prompt
+user_str=$'\xf0\x9f\x91\x8a\[\e[32;1m\]  \u \e[m'
+host_str=$'\xf0\x9f\x92\xbb \[\e[32;1m\] \h \e[m]'
+pwd_str=$'\xf0\x9f\x93\x82 \[\033[0;34m\] \w \e[m'
+
 # Prompt, currently: [ user - cwd ]
-PS1=$'( \xf0\x9f\x92\xbb \[\e[32;1m\] \h\e[m ) \n[ \xf0\x9f\x91\x8a\[\e[32;1m\]  \u \e[m- \xf0\x9f\x93\x82 \[\033[0;34m\] \W \e[m] '
+
+PS1="( $pwd_str ) \n[ $user_str - $host_str "
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
 # How I'm currently breaking my $PATH
