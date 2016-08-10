@@ -4,15 +4,33 @@
 #
 ######################
 
+# Color Vars
+BLACK="\[\033[0;30m\]"
+BLACKBOLD="\[\033[1;30m\]"
+RED="\[\033[0;31m\]"
+REDBOLD="\[\033[1;31m\]"
+GREEN="\[\033[0;32m\]"
+GREENBOLD="\[\033[1;32m\]"
+YELLOW="\[\033[0;33m\]"
+YELLOWBOLD="\[\033[1;33m\]"
+BLUE="\[\033[0;34m\]"
+BLUEBOLD="\[\033[1;34m\]"
+PURPLE="\[\033[0;35m\]"
+PURPLEBOLD="\[\033[1;35m\]"
+CYAN="\[\033[0;36m\]"
+CYANBOLD="\[\033[1;36m\]"
+WHITE="\[\033[0;37m\]"
+WHITEBOLD="\[\033[1;37m\]"
 
 # Deconstructed parts of my prompt
-user_str=$'\xf0\x9f\x91\x8a\[\e[32;1m\]  \u \e[m'
-host_str=$'\xf0\x9f\x92\xbb \[\e[32;1m\] \h \e[m]'
-pwd_str=$'\xf0\x9f\x93\x82 \[\033[0;34m\] \w \e[m'
+user_em=$'\xf0\x9f\x91\x8a'
+host_em=$'\xf0\x9f\x92\xbb'
+pwd_em=$'\xf0\x9f\x93\x82'
 
 # Prompt, currently: [ user - cwd ]
 
-PS1="( $pwd_str ) \n[ $user_str - $host_str "
+PS1="\[( ${pwd_em}${BLUE}  \w ${WHITE}) \n[ ${user_em}${GREEN}  \u ${WHITE}- ${host_em}${GREEN}  \h ${WHITE}] "
+
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
 # How I'm currently breaking my $PATH
