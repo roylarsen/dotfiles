@@ -21,6 +21,7 @@ CYAN="\[\033[0;36m\]"
 CYANBOLD="\[\033[1;36m\]"
 WHITE="\[\033[0;37m\]"
 WHITEBOLD="\[\033[1;37m\]"
+CLEAR="\[\033[0m\]"
 
 # Deconstructed parts of my prompt
 user_em=$'\xf0\x9f\x91\x8a'
@@ -29,7 +30,7 @@ pwd_em=$'\xf0\x9f\x93\x82'
 
 # Prompt, currently: [ user - cwd ]
 
-PS1="\[( ${pwd_em}${BLUE}  \w ${WHITE}) \n[ ${user_em}${GREEN}  \u ${WHITE}- ${host_em}${GREEN}  \h ${WHITE}] "
+PS1="\[( ${pwd_em}${BLUE}  \w ${CLEAR}) \n[ ${user_em}${GREEN}  \u ${CLEAR}- ${host_em}${GREEN}  \h ${CLEAR}] "
 
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
