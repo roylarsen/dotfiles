@@ -4,6 +4,9 @@
 "##
 "###################
 
+"""""""""""""""
+" These sections are about how VIM looks
+
 "Syntax highlighting because I'm not a robot
 syntax on
 
@@ -37,5 +40,13 @@ set number
 "Highlight matching chars
 set showmatch
 
-"Fuckin' Pathogen
+""""""""""""""
+" These sections are about how VIM works
+
+" Move temp files to their own places
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+"Fuckin' Pathogen (Pathogen is a VIM plugin engine)
 execute pathogen#infect()
