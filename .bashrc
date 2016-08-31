@@ -35,7 +35,8 @@ PS1="\[( ${pwd_em}${BLUE}  \w ${CLEAR}) \n[ ${user_em}${GREEN}  \u ${CLEAR}- ${h
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
 # How I'm currently breaking my $PATH
-export PATH="/users/larsenr/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export GOPATH="$HOME/programming/go"
 
 # nonsense to make test-kitchen work (or maybe ruby's bundle, I don't remember, it's for Ruby nonsense)
 if [[ -d "$HOME/.rvm" ]] ; then
