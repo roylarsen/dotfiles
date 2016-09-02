@@ -28,9 +28,41 @@ user_em=$'\xf0\x9f\x91\x8a'
 host_em=$'\xf0\x9f\x92\xbb'
 pwd_em=$'\xf0\x9f\x93\x82'
 
+# Date lookup
+
+
+m_d=`date | awk '{print $2, $3}'`
+
+case "$m_d" in
+'Oct [1-31]' )
+  # JAck-o-Lantern for October
+  date_em=$'\xf0\x9f\x8e\x83'
+  ;;
+'Dec 25' )
+  # Christmas Tree
+  date_em=$'\xf0\x9f\x8e\x84'
+  ;;
+'Jun 24' )
+  # Birthday Cake
+  date_em=$'\xf0\x9f\x8e\x82'
+  ;;
+'Jul 4' )
+  # Alien
+  date_em=$'\xf0\x9f\x91 \xbd'
+  ;;
+'Feb 14' )
+  # 
+  date_em=$'\xf0\x9f\x92\x95'
+  ;;
+*)
+  date_em=""
+  ;;
+esac
+    
+
 # Prompt, currently: [ user - cwd ]
 
-PS1="\[( ${pwd_em}${BLUE}  \w ${CLEAR}) \n[ ${user_em}${GREEN}  \u ${CLEAR}- ${host_em}${GREEN}  \h ${CLEAR}] "
+PS1="\[( ${pwd_em}${BLUE}  \w ${CLEAR}) ${date_em} \n[ ${user_em}${GREEN}  \u ${CLEAR}- ${host_em}${GREEN}  \h ${CLEAR}] "
 
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
