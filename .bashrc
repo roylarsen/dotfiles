@@ -34,7 +34,7 @@ pwd_em=$'\xf0\x9f\x93\x82'
 m_d=`date | awk '{print $2, $3}'`
 
 case "$m_d" in
-'Oct [1-31]' )
+'Oct '[1-31] )
   # JAck-o-Lantern for October
   date_em=$'\xf0\x9f\x8e\x83'
   ;;
@@ -50,7 +50,7 @@ case "$m_d" in
   # Alien
   date_em=$'\xf0\x9f\x91 \xbd'
   ;;
-'Feb 14' )
+'Feb1 4' )
   # 
   date_em=$'\xf0\x9f\x92\x95'
   ;;
