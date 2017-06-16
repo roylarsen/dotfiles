@@ -48,5 +48,8 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
+"So, vim does markdown, but doesn't recognize .md as the file type
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 "Fuckin' Pathogen (Pathogen is a VIM plugin engine)
 execute pathogen#infect()
