@@ -67,7 +67,7 @@ PS1="\[( ${pwd_em}${BLUE}  \w ${CLEAR}) ${date_em} \n[ ${user_em}${GREEN}  \u ${
 # Holy crap, there are some good emojis here: http://www.utf8-chartable.de/unicode-utf8-table.pl
 
 # How I'm currently breaking my $PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/Users/roy/Library/Python/2.7/bin/:$PATH"
 export GOPATH="$HOME/programming/go"
 
 # nonsense to make test-kitchen work (or maybe ruby's bundle, I don't remember, it's for Ruby nonsense)
@@ -85,3 +85,4 @@ alias gc='git commit'
 alias gp='git push'
 alias reload='echo "RELOADING BASH..." &source ~/.bashrc'
 alias celar='clear'
+alias weather='curl wtte.in/boston'

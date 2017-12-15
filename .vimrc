@@ -40,6 +40,12 @@ set number
 "Highlight matching chars
 set showmatch
 
+"Folding settings
+set foldmethod=syntax
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 """"""""""""""
 " These sections are about how VIM works
 
